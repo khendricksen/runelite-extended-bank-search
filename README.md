@@ -4,11 +4,6 @@ A [RuneLite](https://runelite.net/) Plugin Hub plugin that extends the game's **
 box** (the "Show items whose names contain..." prompt) with equipment-stat, slot, warmth and food
 queries.
 
-> **Naming:** the GitHub repository is `runelite-extended-bank-search`; the plugin's identifier on
-> the Plugin Hub (the manifest file name under `plugins/` in the
-> [plugin-hub](https://github.com/runelite/plugin-hub) repo) is **`extended-bank-search`**. The
-> in-game display name is **Extended Bank Search**.
-
 ## Example queries
 
 | Query | Meaning |
@@ -102,12 +97,15 @@ Attack and defence words work in **either order**: `magic attack` ≡ `attack ma
 ### Warm clothing
 
 `warm` (or `warmth`, `wintertodt`) force-shows every item the OSRS Wiki lists as warm clothing.
-Useful for gearing up for Wintertodt without the need for bank tags or Wiki usage. Used on its own, or combined like `warm head`.
+Useful for gearing up for Wintertodt without the need for bank tags or Wiki usage. Used on its own
+or combined like `warm head`.
 
 ### Food
 
 `food` (or `edible`, `eat`) force-shows every item with an "Eat" inventory action. Drinks
-(potions, beer, ales, which use "Drink") are deliberately not included. Items with an "Eat" action that do not restore health will also be shown by this search (such as Araxyte venom sacs and Leechfin).
+(potions, beer, ales, which use "Drink") are deliberately not included. Items with an "Eat" action
+that do not restore health will also be shown by this search (such as Araxyte venom sacs and
+Leechfin).
 
 ## For developers
 
@@ -125,7 +123,15 @@ Search** in the plugin list, open a bank, and click the search button to exercis
 ### Architecture
 
 RuneLite's bank filter fires a `bankSearchFilter` script callback for each item while the search
-prompt is open. This plugin hooks that event, using the same mechanism core RuneLite uses for its `ha > 5k` value search, and force-shows items matching the query.
+prompt is open. This plugin hooks that event, using the same mechanism core RuneLite uses for its
+`ha > 5k` value search, and force-shows items matching the query.
+
+### Naming
+
+The GitHub repository is `runelite-extended-bank-search`; the plugin's identifier on the
+Plugin Hub (the manifest file name under `plugins/` in the
+[plugin-hub](https://github.com/runelite/plugin-hub) repo) is **`extended-bank-search`**. The
+in-game display name is **Extended Bank Search**.
 
 ## License
 
